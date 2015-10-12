@@ -47,9 +47,14 @@ group :development do
   gem 'spring'
 end
 
-gem 'devise'
+group :test do
+  gem 'rspec-rails'
+end
+
+# gem 'devise'
 #  gem for device token authorization. recomended by devise team
 gem 'devise_token_auth'
+gem 'omniauth' # devise_token_auth dependencie require but not installed
 # helping to devise_token_auth to handle cross site scripting request sequrity issues
 gem 'rack-cors', :require => 'rack/cors'
 
